@@ -597,11 +597,12 @@ function createTaskTool(options: {
       const subagentState = filterStateForSubagent(currentState);
       subagentState.messages = [new HumanMessage({ content: description })];
 
+      const { metadata: _, ...subagentConfig } = config;
       // Invoke the subagent
-      const result = (await subagent.invoke(subagentState, config)) as Record<
-        string,
-        unknown
-      >;
+      const result = (await subagent.invoke(
+        subagentState,
+        subagentConfig,
+      )) as Record<string, unknown>;
 
       if (!config.toolCall?.id) {
         if (result.structuredResponse != null) {
