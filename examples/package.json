@@ -19,9 +19,9 @@
     "@langchain/openai": "^1.4.1",
     "@langchain/tavily": "^1.2.0",
     "langchain": "^1.2.39",
-    "langsmith": "^0.5.6",
+    "langsmith": "^0.5.19",
     "dedent": "^1.7.1",
-    "uuid": "^13.0.0",
+    "uuid": "^14.0.0",
     "yaml": "^2.8.2",
     "zod": "^4.3.6"
   },
