@@ -1,5 +1,14 @@
 # deepagents
 
+## 1.10.4
+
+### Patch Changes
+
+- [#566](https://github.com/langchain-ai/deepagentsjs/pull/566) [`04cc3fc`](https://github.com/langchain-ai/deepagentsjs/commit/04cc3fc26001ee566ed94de44c2dda2cf6adecc4) Thanks [@hntrl](https://github.com/hntrl)! - fix(deepagents): propagate subagent `lc_agent_name` during task delegation
+  - Ensure `task` tool subagent invocations override `metadata.lc_agent_name` with the selected `subagent_type`.
+  - Add regression coverage for both compiled subagents (`runnable`) and standard subagent specs to verify tool-time metadata reflects the active subagent.
+  - Update the `langsmith` peer dependency range in `deepagents` to `^0.7.1`.
+
 ## 1.10.3
 
 ### Patch Changes
